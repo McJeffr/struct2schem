@@ -22,5 +22,5 @@ export default {
     commonjs(),
     typescript({ objectHashIgnoreUnknownHack: true }),
   ],
-  external: ["fs", "stream", "zlib", "prismarine-nbt"],
+  external: ["fs", "zlib", "util", "prismarine-nbt"],
 };

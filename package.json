@@ -31,5 +31,8 @@
   },
   "dependencies": {
     "prismarine-nbt": "^1.4.0"
-  }
+  },
+  "exclude": [
+    "./test"
+  ]
 }
