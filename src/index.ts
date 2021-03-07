@@ -1,4 +1,3 @@
-import { readFile, writeFile } from "fs";
 import { promisify } from "util";
 import { NBT, parse, writeUncompressed } from "prismarine-nbt";
 import { gzipSync } from "zlib";
@@ -7,23 +6,6 @@ import extractDataVersion from "./extractors/data-version";
 import extractDimensions from "./extractors/dimensions";
 import extractPalette from "./extractors/extract-palette";
 import extractBlockData from "./extractors/block-data";
-
-// TODO: this is for testing purposes only
-readFile("test/test_large.nbt", async (err, data) => {
-  if (err) {
-    console.log(err);
-    return;
-  }
-
-  try {
-    const schematic = await struct2schem(data);
-    writeFile("test/out.schem", schematic, (err) => {
-      if (err) console.log(err);
-    });
-  } catch (err) {
-    console.log(err);
-  }
-});
 
 const struct2schem = async (file: ArrayBuffer): Promise<Buffer> => {
   return promisify(parse)(file).then((nbt) => {
