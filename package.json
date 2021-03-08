@@ -19,6 +19,9 @@
     "schematic",
     "struct2schem"
   ],
+  "files": [
+    "dist"
+  ],
   "author": "McJeffr",
   "license": "MIT",
   "devDependencies": {
@@ -37,8 +40,5 @@
   },
   "dependencies": {
     "prismarine-nbt": "^1.4.0"
-  },
-  "exclude": [
-    "./test"
-  ]
+  }
 }
