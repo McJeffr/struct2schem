@@ -4,7 +4,7 @@ This package is capable of converting Minecraft structures (.nbt) to Schematics 
 ## Usage
 Below is a simple example of how this library can be used.
 ```typescript
-import struct2schem from "@mcjeffr/struct2schem";
+import struct2schem from "struct2schem";
 
 struct2schem(structBuffer)
   .then((schemBuffer) => {
@@ -16,7 +16,7 @@ struct2schem(structBuffer)
 A more advanced example is shown below. In this example, a file containing a structure on the local file system is read (`test/test_large.nbt`). It is then turned into a schematic. Finally, the schematic data is written to another file (`test/out.schem`).
 ```typescript
 import { readFile, writeFile } from "fs";
-import struct2schem from "@mcjeffr/struct2schem";
+import struct2schem from "struct2schem";
 
 readFile("test/test_large.nbt", async (err, data) => {
   if (err) {
